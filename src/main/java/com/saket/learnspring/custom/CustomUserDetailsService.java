@@ -43,7 +43,8 @@ public class CustomUserDetailsService implements UserDetailsService {
         //check if this user with this username exist, if not, throw an exception  
         // and stop the login process  
         if (userMap == null) {  
-            throw new UsernameNotFoundException("User details not found with this username: " + s);  
+            throw new UsernameNotFoundException("User details not found with "
+                    + "this specific username: " + s);  
         }  
   
         String username = (String) userMap.get("username");  
